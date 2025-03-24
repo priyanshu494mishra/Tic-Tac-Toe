@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div class="background-animation"></div>
+    <div class="container" id="menu">
+        <h1>Tic-Tac-Toe</h1>
+        <label>Player X Name:</label>
+        <input type="text" id="player1" placeholder="Enter player X name">
+        <label id="player2Label">Player O Name:</label>
+        <input type="text" id="player2" placeholder="Enter player O name">
+        <label>Difficulty:</label>
+        <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+        <div class="button-group">
+            <button class="human-btn" onclick="chooseMode('human')">Human ⛄</button>
+            <button class="computer-btn" onclick="chooseMode('computer')"> AI 🤖 </button>
+        </div>
+        <button class="start-btn" onclick="startGame()">Start Game</button>
+    </div>
+    <div class="container" id="game" style="display: none;">
+        <h1>Tic-Tac-Toe</h1>
+        <div class="scoreboard">
+            <div class="score" id="scoreX">Player X: 0</div>
+            <div class="score" id="scoreO">Player O: 0</div>
+        </div>
+        <div class="status" id="status"></div>
+        <div class="board" id="board"></div>
+        <button class="reset" onclick="resetGame()">Restart Game</button>
+    </div>
+    <footer>
+        <p>Developed with ❤️ by Priyanshu </p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/priyanshu0494" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/priyanshu494mishra" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/brahmanpriyanshu_" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+    <audio id="clickSound" src="click.mp3"></audio>
+    <audio id="winSound" src="win.mp3"></audio>
+    <audio id="drawSound" src="draw.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
